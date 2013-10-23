@@ -23,6 +23,31 @@ scss file for school review
 }
 
 
+// Box sizing
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+     -moz-box-sizing: $boxmodel;
+          box-sizing: $boxmodel;
+}
+
+
+
+// Gradients
+@mixin gradient-vertical($startColor: #555, $endColor: #333) {
+  background-color: mix($startColor, $endColor, 60%);
+  background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient(to bottom, $startColor, $endColor); // Standard, IE10
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0); // IE9 and down
+}
+
+
+
+
+
 $gridFluidColumnWidth: 6.38298%;
 $gridFluidGutterWidth: 2.12766%;
 
@@ -76,18 +101,29 @@ $xmin_size: 40px;
 	}
 }
 .ya-select {
-    background-image: linear-gradient(to bottom, #EFEFEF 0%, #FFFFFF 100%);
+//----- for browser compatible use @mixin gradient-vertical(); -------//	
+	@include gradient-vertical(#EFEFEF, #fff);
     font-size: 13px;
     max-width: 230px;
     width: auto;
+//----- overide margin-bottom: 10px; -------//		
+	margin-bottom:0;
 }
 
 .ya-all-reviews {
+	//----- here we do not require this code -------//
+	/*
 	.ya-filter {
 	     margin-top: -4px;
 	}
+	*/
+	
+	
 	.input-append {
-		margin-top: 6px;	
+		
+		//----- for line up -------//
+		margin-top: 10px;	
+		
 		@media (max-width: 979px) {
 			width: 230px !important;
 			.input-small {
@@ -141,6 +177,7 @@ $xmin_size: 40px;
 .ya-input-xmini {
 	width: $xmin_size;
 	height: 30px; 
+	@include box-sizing(border-box);
 }
 .btn.hidden-desktop {
     margin-top: 0;
@@ -159,9 +196,13 @@ $xmin_size: 40px;
     }
 }
 
+//--- For Default Styles ---//
 
-
-
+.RadComboBox_Default .rcbInput{
+	padding: 5px 9px !important;
+	@include box-sizing(border-box);
+	height: auto;
+}
 
 
 
