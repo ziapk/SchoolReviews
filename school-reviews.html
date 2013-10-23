@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Example YA Content Template</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ 
+
+<link href="http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.1/css/bootstrap.css" rel="stylesheet"/>
+<link href="http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.1/css/bootstrap-responsive.css" rel="stylesheet"/>
+
+<link href="css/screen.css" rel="stylesheet" media="screen">
+<link href="css/school-reviews.css" rel="stylesheet" media="screen">
+
+<script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.0.6-development-only.js"></script>
+
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+
+<style>
+	/* These are just temporary styles for this page */
+	body {
+		padding: 40px;
+		background-color: LightGray;
+	}
+	@media (max-width: 1200px) {
+		body {
+			padding: 0;
+		} 
+	}
+</style>
+
+</head>
+<body>
+
+
+<div class="container-fluid main-box ya-reviews">
+	<div class="ya-article">	
+		<div class="ya-sidebar hidden-phone">
+			<!-- Put left menu here -->&nbsp;
+		</div><!-- end sidebar -->
+		<div class="ya-main-section">	
+			<div class="alert">
+				<span data-icon="&#x52;" aria-hidden="true"></span>You have 3 new reviews
+			</div><!-- end alert -->
+			<h1>Reviews</h1>
+			
+			<!-- ################ OVERALL RATING ############## -->
+		    <div class="ya-widget ya-overall-rating">
+				<h3>
+					Overall Rating &nbsp;
+					<span data-icon="&#x4e;" aria-hidden="true" class="ya-star"></span>
+					<span data-icon="&#x4e;" aria-hidden="true" class="ya-star"></span>
+					<span data-icon="&#x4e;" aria-hidden="true" class="ya-star"></span>
+					<span data-icon="&#x4e;" aria-hidden="true" class="ya-star"></span>
+					<span data-icon="&#x4e;" aria-hidden="true" class="ya-star"></span>
+					<small>(4.25) based on 123 reviews </small>
+				</h3>
+			</div><!-- end overall rating -->
+			
+			<!-- ################ LATEST COMMENTS ############## -->
+		    <section class="ya-widget ya-latest-comments">
+				<h3>Latest Comments</h3>
+				<div class="ya-latest-comments-items">
+					<div class="ya-latest-comments-item">
+						<div class="row-fluid">
+							<div class="pull-left">
+								<span data-icon="&#x4e;" aria-hidden="true"></span>
+								<span data-icon="&#x4e;" aria-hidden="true"></span>
+								<span data-icon="&#x4e;" aria-hidden="true"></span>
+								<span data-icon="&#x4e;" aria-hidden="true"></span>
+								<span data-icon="&#x4e;" aria-hidden="true"></span> 
+							</div>	
+							<span> &nbsp; By: George</span>
+							<span> &nbsp; Nov23, 2012</span>
+						</div>	
+						<p>
+							Wow! What a great school Wow! What a great school
+							Wow! What a great school Wow! What a great school
+							Wow! What a great school Wow! What a great school
+						</p>
+						<a class="ya-action" href="#">Read more...</a>	
+					</div><!-- end ya-latest-comments-item -->
+					<div class="ya-latest-comments-item">
+						<div class="row-fluid">
+							<div class="pull-left">
+								<span data-icon="&#x4e;" aria-hidden="true"></span>
+								<span data-icon="&#x4e;" aria-hidden="true"></span>
+								<span data-icon="&#x4e;" aria-hidden="true"></span>
+								<span data-icon="&#x4e;" aria-hidden="true"></span>
+								<span data-icon="&#x4e;" aria-hidden="true"></span> 
+							</div>	
+							<span> &nbsp; By: George</span>
+							<span> &nbsp; Nov23, 2012</span>
+						</div>	
+						<p>
+							Wow! What a great school Wow! What a great school
+							Wow! What a great school Wow! What a great school
+							Wow! What a great school Wow! What a great school
+						</p>
+						<a class="ya-action" href="#">Read more...</a>
+					</div><!-- end ya-latest-comments-item -->
+				</div><!-- end ya-latest-comments-items -->
+			</section><!-- end latest comments -->
+			
+			<!-- ################ ALL REVIEWS ############## -->
+		    <section class="ya-widget ya-all-reviews">
+				<h3>All Reviews</h3>
+				<div class="ya-all-review-controls">
+					
+					
+					<select class="ya-select ya-program-datas-select">
+						<option value="-1" selected="selected">Program Datas</option>
+						<option value="test">test</option>
+					</select>
+				
+					<select class="ya-select ya-track-name-select">
+						<option value="-1" selected="selected">Track Name</option>
+						<option value="test">test</option>
+					</select>
+					<select class="ya-select ya-reviewed-from-select">
+						<option value="-1" selected="selected">Reviewed From</option>
+						<option value="test">test</option>
+					</select>
+				
+					<select class="ya-select ya-reviewed-to-select">
+						<option value="-1" selected="selected">Reviewed To</option>
+						<option value="test">test</option>
+					</select>&nbsp;&nbsp;
+					<select class="ya-select ya-rating-select">
+						<option value="-1" selected="selected">Rating</option>
+						<option value="test">test</option>
+					</select>
+				
+					<button class="ya-filter btn">
+						Filter
+					</button>
+					<div class="input-append">
+						<input type="search" placeholder="" class="input-small"/>
+						<button class="btn ya-input-xmini" type="button">
+							<span data-icon="`" aria-hidden="true"></span>
+						</button>
+					</div>
+					<button class="btn hidden-desktop" type="button">
+						Search
+					</button>
+						
+				</div><!-- end ya-all-review-controls -->
+				<div class="row-fluid visible-desktop">
+					<table class="table table-striped ya-modules-table" border="1">
+					    <thead>  
+					        <tr>  
+					            <th>Reviewer<span data-icon="&#x45;" aria-hidden="true"></span></th>  
+					            <th>Program Dates<span data-icon="&#x45;" aria-hidden="true"></span></th>  
+					            <th>Track Name<span data-icon="&#x45;" aria-hidden="true"></span></th>  
+					            <th>Review Date<span data-icon="&#x45;" aria-hidden="true"></span></th>  
+					            <th>Rating<span data-icon="&#x45;" aria-hidden="true"></span></th>  
+					        </tr>                            
+					    </thead>                             
+					    <tbody>                              
+					        <tr class="ya-row-yellow">                             
+					             <td>George Johnson</td>         
+					             <td>Nov 1, 2013</td>         
+					             <td>Flow Yoga</td>         
+					             <td>Nov 23, 2013</td>         
+					             <td>5</td>         
+					        </tr>                            
+					        <tr>                             
+					             <td>George Johnson</td>         
+					             <td>Nov 1, 2013</td>         
+					             <td>Flow Yoga</td>         
+					             <td>Nov 23, 2013</td>         
+					             <td>5</td>         
+					        </tr>                            
+					        <tr class="ya-row-yellow">                             
+					             <td>George Johnson</td>         
+					             <td>Nov 1, 2013</td>         
+					             <td>Flow Yoga</td>         
+					             <td>Nov 23, 2013</td>         
+					             <td>5</td>         
+					        </tr>                            
+					        <tr>                             
+					             <td>George Johnson</td>         
+					             <td>Nov 1, 2013</td>         
+					             <td>Flow Yoga</td>         
+					             <td>Nov 23, 2013</td>         
+					             <td>5</td>         
+    				        </tr>                            
+					    </tbody>                             
+					</table><!-- end ya-modules-table -->
+					<div class="pull-right">
+						<button type="button" class="btn btn-success">Export to .xls</button>
+					</div><!-- end pull-right -->
+				</div>
+			</section><!-- end all reviews -->
+			
+			<!-- ################ TOTALS ############## -->
+		    <section class="ya-widget ya-totals">
+				<div class="pull-left">
+					<h4>Total Reviews <small> 14 </small></h4>
+					<div>
+						<h4>Average rating &nbsp;
+							<span data-icon="&#x4e;" aria-hidden="true"></span>
+							<span data-icon="&#x4e;" aria-hidden="true"></span>
+							<span data-icon="&#x4e;" aria-hidden="true"></span>
+							<span data-icon="&#x4e;" aria-hidden="true"></span>
+							<span data-icon="&#x4e;" aria-hidden="true"></span> 
+							<small> &nbsp; (4.25)</small> 
+						</h4>
+					</div>	
+				</div><!-- end pull-left -->
+			</section><!-- end totals -->
+			<div class="clearfix"></div>
+			<a href="#" class="ya-action hidden-desktop">Back to top</a>
+		</div>
+	</div>		
+</div>
+
+</body>
+</html>
